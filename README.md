@@ -87,7 +87,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-left: 520px;
             overflow: hidden;
         }
 
@@ -156,7 +155,7 @@
 
     <header>
         <img src="portfolio.png" alt="portfolio" width="420px" height="180px">
-        <img src="riki copy.png" alt="arrow" width="220px" height="180px">
+        <img src="arrow.svg" alt="arrow" width="220px" height="180px">
     </header>
    
     
