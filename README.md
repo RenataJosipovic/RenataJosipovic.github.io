@@ -157,7 +157,7 @@
 
     <header>
         <img src="portfolio.png" alt="portfolio" width="420px" height="180px">
-        <img src="arrow.svg" alt="arrow" width="100px" height="100px">
+        <img src="arrow.svg" alt="arrow">
     </header>
    
     
