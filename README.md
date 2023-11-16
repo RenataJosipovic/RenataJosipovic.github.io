@@ -11,8 +11,8 @@
             font-family: 'Raleway', sans-serif;
             background-color: #020140;
             color: #fff; /* Vit text för kontrast */
-            text-align: center;
-            margin: auto;
+            margin: 20px;
+            padding: 20px;
         }
 
         header {
