@@ -63,11 +63,11 @@
         }
 
         .qr-kod {
-            margin-left: 600px;
+            margin-left: 400px;
         }
 
         .gif {
-            margin-left: 480px;
+            margin-left: 350px;
         }
 
         .cv {
