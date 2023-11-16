@@ -87,6 +87,7 @@
         .carousel-container {
             display: flex;
             align-items: center;
+            margin-left: 400px;
         }
 
         .carousel-slide {
