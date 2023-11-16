@@ -93,6 +93,7 @@
         .carousel-slide {
             display: none;
             width: 100%;
+            margin-left: 400px;
         }
 
         button {
