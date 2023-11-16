@@ -118,8 +118,7 @@
 
     </style>
     <script>
-    
-document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel-slide');
     const totalSlides = slides.length;
