@@ -42,7 +42,7 @@
         }
 
         .logos img {
-            width: 245px;
+            width: 500px;
             height: 250px;
             margin: 10px;
         }
@@ -63,11 +63,11 @@
         }
 
         .qr-kod {
-            margin-left: 400px;
+            margin: auto;
         }
 
         .gif {
-            margin-left: 350px;
+            margin: auto;
         }
 
         .cv {
