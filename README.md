@@ -60,7 +60,6 @@
 
         .video-container iframe {
             position: absolute;
-            margin-left: 150px;
             width: 80%;
             height: 80%;
         }
