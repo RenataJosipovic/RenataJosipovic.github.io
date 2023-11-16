@@ -13,10 +13,10 @@
             color: #fff; /* Vit text för kontrast */
             margin: 20px;
             padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* För att centrera vertikalt på hela bildskärmen */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* För att centrera vertikalt på hela bildskärmen */
         }
 
         header {
