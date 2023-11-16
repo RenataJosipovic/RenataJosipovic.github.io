@@ -88,6 +88,9 @@
         .carousel-container {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            margin-left: 520px;
+            overflow: hidden;
         }
 
         .carousel-slide {
@@ -155,6 +158,7 @@
 
     <header>
         <img src="portfolio.png" alt="portfolio" width="420px" height="180px">
+        <img src="arrow.svg" alt="arrow" width="100px" height="100px">
     </header>
    
     
