@@ -31,4 +31,12 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('nextBtn').addEventListener('click', nextSlide);
     document.getElementById('prevBtn').addEventListener('click', prevSlide);
   });
+
+document.addEventListener('DOMContentLoaded', function () {
+    var videoFrame = document.getElementById('videoFrame');
+
+    // Pausa videon när sidan laddas
+    videoFrame.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+});
+
   
