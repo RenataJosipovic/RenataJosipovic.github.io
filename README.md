@@ -11,8 +11,8 @@
             font-family: 'Raleway', sans-serif;
             background-color: #020140;
             color: #fff; /* Vit text för kontrast */
-            margin: 20;
-            padding: 20;
+            margin: 20px;
+            padding: 20px;
         }
 
         header {
@@ -85,7 +85,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-left: 520px;
+            margin-left: 400px;
             overflow: hidden;
         }
 
