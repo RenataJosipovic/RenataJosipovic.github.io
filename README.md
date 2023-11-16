@@ -1,4 +1,3 @@
-# RenataJosipovic.github.io
 
 <html lang="sv">
 <head>
@@ -13,7 +12,7 @@
             background-color: #020140;
             color: #fff; /* Vit text för kontrast */
             margin: 20;
-            padding: 20px;
+            padding: 20;
         }
 
         header {
