@@ -16,7 +16,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh; /* För att centrera vertikalt på hela bildskärmen */
         }
 
         header {
