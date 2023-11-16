@@ -46,7 +46,7 @@
         }
 
         .logos img {
-            width: 500px;
+            width: 250px;
             height: 250px;
             margin: 10px;
         }
