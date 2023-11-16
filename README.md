@@ -1,6 +1,5 @@
 # RenataJosipovic.github.io
 
-<!DOCTYPE html>
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +7,6 @@
     <title>Din Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/045605d7ba.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
     <style>
         body {
             font-family: 'Raleway', sans-serif;
