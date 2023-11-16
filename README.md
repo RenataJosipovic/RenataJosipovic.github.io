@@ -157,7 +157,7 @@
 
     <header>
         <img src="portfolio.png" alt="portfolio" width="420px" height="180px">
-        <img src="arrow.svg" alt="arrow">
+        <img src="riki copy.png" alt="arrow" width="220px" height="180px">
     </header>
    
     
