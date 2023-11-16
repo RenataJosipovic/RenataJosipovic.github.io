@@ -13,9 +13,9 @@
             color: #fff; /* Vit text för kontrast */
             margin: 20px;
             padding: 20px;
-                display: flex;
-    align-items: center;
-    justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         header {
@@ -93,7 +93,6 @@
         .carousel-slide {
             display: none;
             width: 100%;
-            margin-left: 400px;
         }
 
         button {
