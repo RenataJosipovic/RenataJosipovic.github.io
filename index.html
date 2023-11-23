@@ -82,7 +82,31 @@
             text-align: center;
         }
 
-        .carousel-container {
+        #carousel-container-logos {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 520px;
+            overflow: hidden; 
+        }
+        .carousel-slide-logos {
+            display: none;
+            width: 100%;
+        }
+        
+         #carousel-container-web {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 520px;
+            overflow: hidden; 
+        }
+        .carousel-slide-web {
+            display: none;
+            width: 100%;
+        }
+        
+         #carousel-container-app {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -90,7 +114,19 @@
             overflow: hidden; 
         }
 
-        .carousel-slide {
+        .carousel-slide-app {
+            display: none;
+            width: 100%;
+        }
+        
+         #carousel-container-other {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 520px;
+            overflow: hidden; 
+        }
+        .carousel-slide-other {
             display: none;
             width: 100%;
         }
@@ -144,24 +180,24 @@
     <section class="logos">
         <h1>Logotypes</h1>
         <p>Click the arrows to navigate through the logos.</p>
-        <div class="carousel-container">
+        <div id="carousel-container-logos">
             <button class="prevBtn"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
-          <div class="carousel-slide">
+          <div class="carousel-slide-logos">
             <img src="Syla consulting.png" alt="Logo 1">
           </div>
-          <div class="carousel-slide" >
+          <div class="carousel-slide-logos" >
             <img src="BusyBee.png" alt="Logo 2">
           </div>
-          <div class="carousel-slide">
+          <div class="carousel-slide-logos">
             <img src="riki copy.png" alt="Logo 3">
           </div>
-          <div class="carousel-slide">
+          <div class="carousel-slide-logos">
             <img src="logorenata.png" alt="Logo 4">
           </div>
-          <div class="carousel-slide">
+          <div class="carousel-slide-logos">
             <img src="Agency.png" alt="Logo 5">
           </div>   
-          <div class="carousel-slide">
+          <div class="carousel-slide-logos">
             <img src="unga_gamers.png" alt="Logo 6">
           </div> 
           <button class="nextBtn"><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
@@ -172,9 +208,9 @@
     <section>
         <h1>Web pages</h1>
         <p>Click the arrows to navigate through the web pages.</p>
-        <div class="carousel-container">
+        <div id="carousel-container-web">
             <button class="prevBtn"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
-             <div class="carousel-slide">
+             <div class="carousel-slide-web">
                 <p><a href="http://www.sylaconsulting.se" target="_blank">www.sylaconsulting.se</a></p><br>
                 <img src="realistic_laptop_with_smartphone.svg" alt="webpage">
              </div>
@@ -185,9 +221,9 @@
     <section>
         <h1>Mobile app</h1>
         <p>Scan QR code with Expo Go- app on your mobile phone</p>
-        <div class="carousel-container">
+        <div id="carousel-container-app">
         <button class="prevBtn"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
-            <div class="carousel-slide">
+            <div class="carousel-slide-app">
                 <img src="qr-kod.png" alt="QR-kod">
             </div>
         <button class="nextBtn"><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
@@ -207,14 +243,14 @@
     <section>
         <h1>Other <br> (GIF, Book cover, Spotify playlist cover)</h1>
         <p>Click the arrows to navigate through design.</p>
-        <div class="carousel-container">
+        <div id="carousel-container-other">
         <button class="prevBtn"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
-          <div class="carousel-slide">
+          <div class="carousel-slide-other">
             <img class="gif" src="CoffeeShop_.gif" alt="gif" width="400px" height="280px">
             <p> An advertising banner, presented as a GIF, created using tools such as Adobe After Effects, Adobe Photoshop, and Adobe Illustrator. <br> 
             Additional details can be provided. </p>
           </div>
-          <div class="carousel-slide" >
+          <div class="carousel-slide-other" >
             <img src="spotify_cover.png" alt="spotify_cover">
           </div>
         <button class="nextBtn"><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
