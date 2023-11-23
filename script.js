@@ -39,6 +39,8 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
   var videoFrame = document.getElementById('videoFrame');
 
-  // Pausa videon när sidan laddas
-  videoFrame.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+  if (videoFrame) {
+    // Pausa videon när sidan laddas
+    videoFrame.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+  }
 });
