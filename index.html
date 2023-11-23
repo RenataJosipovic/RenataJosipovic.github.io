@@ -98,6 +98,20 @@
             display: none;
             width: 100%;
         }
+        
+         .carousel-container-other {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 520px;
+            overflow: hidden;
+            
+        }
+
+        .carousel-slide-other {
+            display: none;
+            width: 100%;
+        }
 
         button {
             padding: 10px;
@@ -191,10 +205,25 @@
     </section>
 
     <section>
-        <h1>GIF</h1>
-        <img class="gif" src="CoffeeShop_.gif" alt="gif" width="400px" height="280px">
-        <p> An advertising banner, presented as a GIF, created using tools such as Adobe After Effects, Adobe Photoshop, and Adobe Illustrator. <br> 
+        <h1>Other (GIF, Book cover, Spotify playlist cover)</h1>
+        <p>Click the arrows to navigate through design.</p>
+        <div class="carousel-container-other">
+            <button id="prevBtn"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
+          <div class="carousel-slide-other">
+            <img class="gif" src="CoffeeShop_.gif" alt="gif" width="400px" height="280px">
+            <p> An advertising banner, presented as a GIF, created using tools such as Adobe After Effects, Adobe Photoshop, and Adobe Illustrator. <br> 
             Additional details can be provided. </p>
+          </div>
+          <div class="carousel-slide-other">
+            <img src="Bokomslag-framsida.jpg" alt="Bokomslag-framsida" width="250px" height="350px">
+            <img src="Bokomslag-baksida.jpg" alt="Bokomslag-baksida" width="150px" height="150px">
+            <img src="Bokomslag-Rygg.jpg" alt="Bokomslag-Rygg" width="150px" height="150px">
+          </div>
+          <div class="carousel-slide-other" >
+            <img src="spotify_cover.png" alt="spotify_cover">
+          </div>
+          <button id="nextBtn"><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
+        </div>
     </section>
 
     <!-- <section>
