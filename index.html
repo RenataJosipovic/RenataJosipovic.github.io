@@ -98,31 +98,6 @@
             width: 100%;
         }
         
-         .carousel-container-other {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-left: 520px;
-            overflow: hidden;    
-        }
-
-        .carousel-slide-other {
-            display: none;
-            width: 100%;
-        }
-        
-        .carousel-container-webpages {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-left: 520px;
-            overflow: hidden; 
-        }
-
-        .carousel-slide-webpages {
-            display: none;
-            width: 100%;
-        }
         button {
             padding: 10px;
             font-size: 16px;
@@ -195,8 +170,8 @@
     <section class="web-link">
         <h1>Web pages</h1>
         <p>Click the arrows to navigate through the web pages.</p>
-        <div class="carousel-container-webpages">
-            <button id="prevBtn"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
+        <div class="carousel-container">
+            <button class="prevBtn"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
              <div class="carousel-slide-webpages">
                 <p><a href="http://www.sylaconsulting.se" target="_blank">www.sylaconsulting.se</a></p><br>
                 <img class="webpages" src="realistic_laptop_with_smartphone.svg" alt="webpage result" width="350px" height="350px">
@@ -228,19 +203,19 @@
     <section>
         <h1>Other <br> (GIF, Book cover, Spotify playlist cover)</h1>
         <p>Click the arrows to navigate through design.</p>
-        <div class="carousel-container-other">
+        <div class="carousel-container">
             <button class="prevBtn"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
-          <div class="carousel-slide-other">
+          <div class="carousel-slide">
             <img class="gif" src="CoffeeShop_.gif" alt="gif" width="400px" height="280px">
             <p> An advertising banner, presented as a GIF, created using tools such as Adobe After Effects, Adobe Photoshop, and Adobe Illustrator. <br> 
             Additional details can be provided. </p>
           </div>
-          <div class="carousel-slide-other">
+          <div class="carousel-slide">
             <img src="Bokomslag-framsida.jpg" alt="Bokomslag-framsida" width="250px" height="350px">
             <img src="Bokomslag-baksida.jpg" alt="Bokomslag-baksida" width="150px" height="150px">
             <img src="Bokomslag-Rygg.jpg" alt="Bokomslag-Rygg" width="150px" height="150px">
           </div>
-          <div class="carousel-slide-other" >
+          <div class="carousel-slide" >
             <img src="spotify_cover.png" alt="spotify_cover">
           </div>
           <button class="nextBtn"><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
