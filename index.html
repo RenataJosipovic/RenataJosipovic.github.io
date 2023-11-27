@@ -10,142 +10,118 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha256-GLhlTQ8iUaxFf1r1+SGbqD1Tl9K1UqPbCEJ70yZLX5I=" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/045605d7ba.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-    <style>
-        body {
-            font-family: 'League Spartan', sans-serif;
-            background-color: #DDD0C8;
-            color: #323232; 
-            margin: 20px;
-            padding: 20px;
-        }
-
-        header {
-            background-color: #DDD0C8;
-            padding-top: 100px;
-            padding-bottom: 250px;
-            margin-top: 100px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        section {
-            margin: 20px;
-            padding: 20px;
-            background-color: #DDD0C8;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            margin-top: 20px;
-            background-color: #DDD0C8;
-        }
-        
-        h1 {
-            color: #323232;
-            text-align: center;
-        }
-        
-        .logos, .webpages {
-            text-align: center;
-        }
-        
-        .logos img, .webpages img {
-            width: 245px;
-            height: 250px;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 47%;
-            padding-top: 22px;
-            height: 0;
-            overflow: hidden;
-        }
     
-        .video-container iframe {
-            position: absolute;
-            width: 100%; /* Set the width to 100% to make it responsive */
-            height: 100%; /* Set the height to 100% to make it responsive */
-            top: 0;
-        }
-        .qr-kod, .gif {
-            text-align: center;
-        }
+    <style>
+body {
+    font-family: 'League Spartan', sans-serif;
+    background-color: #DDD0C8;
+    color: #323232;
+    margin: 20px;
+    padding: 20px;
+}
 
-        .qr-kod img, .gif img {
-            display: block;
-            margin: 0 auto;
-        }        
+header {
+    background-color: #DDD0C8;
+    padding-top: 100px;
+    padding-bottom: 250px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
-        .cv {
-            color: #323232;
-            margin-left: 600px;
-            margin-right: 20px;
-            font-size: large;
-        }
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #DDD0C8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        p {
-            text-align: center;
-        }
+h1 {
+    color: #323232;
+    text-align: center;
+}
 
-        .carousel-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin: 0 auto;
-            overflow: hidden;
-        }
+.logos, .webpages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        .carousel-slide img {
-            display: block;
-            margin: 0 auto;
-        }
+.logos img, .webpages img {
+    width: 245px;
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+}
 
-        button {
-            padding: 10px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            background-color: #DDD0C8;
-            color: #fff;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    overflow: hidden;
+}
 
-        button:hover {
-            background-color: #C0C0C0;
-        }
-        
-        .prevBtn {
-            margin-right: auto;
-            margin-left: 20px; 
-        }
-        
-        .nextBtn {
-            margin-right: 550px;
-        }
-        a {
-            color: #323232;
-        }
+.carousel-slide img {
+    display: block;
+    margin: 0 auto;
+}
 
-        @media only screen and (max-width: 768px) {
-            header {
+.prevBtn, .nextBtn {
+    margin: 0 10px;
+}
+
+.qr-kod, .gif {
+    text-align: center;
+}
+
+.qr-kod img, .gif img {
+    display: block;
+    margin: 0 auto;
+}
+
+.cv {
+    color: #323232;
+    margin-left: 600px;
+    margin-right: 20px;
+    font-size: large;
+}
+
+p {
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #DDD0C8;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #C0C0C0;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
         padding-top: 80px;
         padding-bottom: 100px;
-        }
-        }
+    }
+}
 
-        @media only screen and (max-width: 480px) {
-            header {
+@media only screen and (max-width: 480px) {
+    header {
         padding-top: 50px;
         padding-bottom: 70px;
-        }
-        }
+    }
+}
 
     </style>
 </head>
