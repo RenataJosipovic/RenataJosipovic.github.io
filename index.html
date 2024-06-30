@@ -58,8 +58,8 @@ h1 {
     height: 300px;
     display: block;
     margin: 0 auto;
-    margin-left: 450px;
 }
+
 .qr-kod img {
     width: 150px;
     height: 150px;
@@ -137,40 +137,51 @@ button:hover {
     <section class="logos">
         <h1>Logotypes</h1>
         <p>Click the arrows to navigate through the logos.</p>
-        <div class="carousel-container">
-            <button class="prevBtn"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
-          <div class="carousel-slide">
-            <img src="Syla consulting.png" alt="Logo 1">
-          </div>
-          <div class="carousel-slide">
-            <img src="BusyBee.png" alt="Logo 2">
-          </div>
-          <div class="carousel-slide">
-            <img src="riki copy.png" alt="Logo 3">
-          </div>
-          <div class="carousel-slide">
-            <img src="Agency.png" alt="Logo 5">
-          </div>   
-          <button class="nextBtn"><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
+        <div class="carousel-container logos-carousel">
+            <button class="prevBtn logos-prev"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
+            <div class="carousel-slide">
+                <img src="Syla consulting.png" alt="Logo 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="BusyBee.png" alt="Logo 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="riki copy.png" alt="Logo 3">
+            </div>
+            <div class="carousel-slide">
+                <img src="Agency.png" alt="Logo 5">
+            </div>   
+            <button class="nextBtn logos-next"><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
         </div>
-      </section>
+    </section>
  
 
     <section>
         <h1>Web pages and Web applications</h1>
-        <div>
-        <p><a href="http://www.sylaconsulting.se" target="_blank">www.sylaconsulting.se</a></p><br>
-        <img src="realistic_laptop_with_smartphone.svg" alt="webpage" width="350px" height="350px" class="webpages">
-        <p><a href="https://klimatkoll.github.io/KlimatKoll-App/" target="_blank">KlimatKoll</a></p><br>
-        <img src="realistic_laptop_with_smartphone_1.svg" alt="webapp" width="350px" height="350px" class="webpages">
+        <p>Click the arrows to navigate through the web pages and applications.</p>
+        <div class="carousel-container webpages-carousel">
+            <button class="prevBtn webpages-prev"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
+            <div class="carousel-slide">
+                <a href="http://www.sylaconsulting.se" target="_blank">
+                    <img src="realistic_laptop_with_smartphone.svg" alt="webpage">
+                </a>
+                <p><a href="http://www.sylaconsulting.se" target="_blank">www.sylaconsulting.se</a></p>
+            </div>
+            <div class="carousel-slide">
+                <a href="https://klimatkoll.github.io/KlimatKoll-App/" target="_blank">
+                    <img src="realistic_laptop_with_smartphone_1.svg" alt="webapp">
+                </a>
+                <p><a href="https://klimatkoll.github.io/KlimatKoll-App/" target="_blank">KlimatKoll</a></p>
+            </div>
+            <button class="nextBtn webpages-next"><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
         </div>
     </section>
 
     <section>
         <h1>Mobile app</h1>
         <div>
-        <p>Scan QR code with Expo Go- app on your mobile phone</p>
-        <img src="qr-kod.png" alt="QR-kod" width="150px" height="150px" class="qr-kod">
+            <p>Scan QR code with Expo Go- app on your mobile phone</p>
+            <img src="qr-kod.png" alt="QR-kod" class="qr-kod">
         </div>
     </section>
 
@@ -180,8 +191,60 @@ button:hover {
     <a href="https://www.linkedin.com/in/renata-josipovic-515426221" target="_blank">
         <i class="fab fa-linkedin fa-xl" style="color: #323232;"></i>
     </a>
-    <p>© 2023 Renata Josipovic - Portfolio. All rights reserved.</p>
+    <p>© 2024 Renata Josipovic - Portfolio. All rights reserved.</p>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const logosSlides = document.querySelectorAll('.logos-carousel .carousel-slide');
+    const logosPrevBtn = document.querySelector('.logos-prev');
+    const logosNextBtn = document.querySelector('.logos-next');
+    let logosIndex = 0;
+
+    function showLogosSlide(index) {
+        logosSlides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
+        });
+    }
+
+    logosPrevBtn.addEventListener('click', () => {
+        logosIndex = (logosIndex > 0) ? logosIndex - 1 : logosSlides.length - 1;
+        showLogosSlide(logosIndex);
+    });
+
+    logosNextBtn.addEventListener('click', () => {
+        logosIndex = (logosIndex < logosSlides.length - 1) ? logosIndex + 1 : 0;
+        showLogosSlide(logosIndex);
+    });
+
+    showLogosSlide(logosIndex);
+
+    const webpagesSlides = document.querySelectorAll('.webpages-carousel .carousel-slide');
+    const webpagesPrevBtn = document.querySelector('.webpages-prev');
+    const webpagesNextBtn = document.querySelector('.webpages-next');
+    let webpagesIndex = 0;
+
+    function showWebpagesSlide(index) {
+        webpagesSlides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
+        });
+    }
+
+    webpagesPrevBtn.addEventListener('click', () => {
+        webpagesIndex = (webpagesIndex > 0) ? webpagesIndex - 1 : webpagesSlides.length - 1;
+        showWebpagesSlide(webpagesIndex);
+    });
+
+    webpagesNextBtn.addEventListener('click', () => {
+        webpagesIndex = (webpagesIndex < webpagesSlides.length - 1) ? webpagesIndex + 1 : 0;
+        showWebpagesSlide(webpagesIndex);
+    });
+
+    showWebpagesSlide(webpagesIndex);
+});
+</script>
+
 </body>
 </html>
+
 
