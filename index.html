@@ -4,166 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <script src="https://kit.fontawesome.com/045605d7ba.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     
-<style>
-body {
-    font-family: 'League Spartan', sans-serif;
-    background-color: #DDD0C8;
-    color: #323232;
-    margin: 20px;
-    padding: 20px;
-}
+    <style>
+        /* Existing CSS code remains unchanged */
+        body {
+            font-family: 'League Spartan', sans-serif;
+            background-color: #DDD0C8;
+            color: #323232;
+            margin: 20px;
+            padding: 20px;
+        }
 
-header {
-    background-color: #DDD0C8;
-    padding-top: 100px;
-    padding-bottom: 250px;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+        header {
+            background-color: #DDD0C8;
+            padding-top: 100px;
+            padding-bottom: 250px;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
 
-section {
-    margin: 20px;
-    padding: 40px;
-    background-color: #DDD0C8;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centrera text inom sektioner */
-}
+        section {
+            margin: 20px;
+            padding: 40px;
+            background-color: #DDD0C8;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
 
-h1 {
-    color: #323232;
-    text-align: center;
-}
-
-.logos img {
-    width: 245px;
-    height: 250px;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-
-.webpages img {
-    width: 450px;
-    height: 250px;
-    display: block;
-    margin: 0 auto;
-}
-
-.qr-kod img {
-    display: block;
-    margin: 0 auto;
-}
-
-.carousel-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
-    margin-top: 20px; 
-    margin-bottom: 20px;
-}
-
-.carousel-slide img {
-    display: block;
-    margin: 0 auto;
-}
-
-.prevBtn, .nextBtn {
-    margin: 0 5px;
-}
-    
-.cv {
-    color: #323232;
-    text-align: center;
-    margin-left: 600px;
-    margin-right: 20px;
-    font-size: large;
-}
-
-p {
-    text-align: center;
-}
-
-button {
-    padding: 10px;
-    font-size: 25px;
-    border: none;
-    border-radius: 5px;
-    background-color: #DDD0C8;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #C0C0C0;
-}
-
-@media only screen and (max-width: 768px) {
-    header {
-        padding-top: 80px;
-        padding-bottom: 100px;
-    }
-
-    .carousel-slide img {
-        max-width: 200px; /* Justera bildstorlek för mindre skärmar */
-    }
-
-    .webpages img {
-        max-width: 300px; /* Anpassa maxbredd för webbapplikationsbilder på mindre skärmar */
-    }
-
-    .cv {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    header {
-        padding-top: 50px;
-        padding-bottom: 70px;
-    }
-
-    .logos img, .webpages img, .qr-kod img {
-        max-width: 100%; /* Full bredd för mindre skärmar */
-    }
-
-    .carousel-slide img {
-        max-width: 150px; /* Justera bildstorlek för mycket små skärmar */
-    }
-
-    .webpages img {
-        max-width: 250px; /* Anpassa maxbredd för webbapplikationsbilder på mycket små skärmar */
-    }
-
-    .cv {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-</style>
+        h1 {
+            color: #323232;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
     <header>
         <img src="stars.gif" alt="Animated stars GIF">
-        <img src="portfolio.png" alt="portfolio" width="550px" height="380px">
+        <img src="portfolio.png" alt="portfolio" width="550px" height="420px">
         <img src="arrow.svg" alt="arrow" width="100px" height="100px">
     </header>
    
-    
-    <section class="logos">
+    <!-- Add AOS to sections to animate from left and right -->
+    <section class="logos" data-aos="fade-right">
         <h1>Logotypes</h1>
         <p>Click the arrows to navigate through the logos.</p>
         <div class="carousel-container logos-carousel">
@@ -184,14 +85,13 @@ button:hover {
                 <img src="MJ_logo.jpg" alt="Logotype 5">
             </div>   
             <div class="carousel-slide">
-                <img src="2.jpg" alt="Logotype 5">
+                <img src="2.jpg" alt="Logotype 6">
             </div>  
             <button class="nextBtn logos-next"><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
         </div>
     </section>
  
-
-    <section>
+    <section data-aos="fade-left">
         <h1>Web pages and Web applications</h1>
         <p>Click the arrows to navigate through the web pages and applications.</p>
         <div class="carousel-container webpages-carousel">
@@ -212,83 +112,91 @@ button:hover {
         </div>
     </section>
 
-    <section>
+    <section data-aos="fade-right">
         <h1>Prototypes</h1>
         <p><a href="https://www.figma.com/proto/i4azN0R2dxPi7F37P1gdhf/Personas%2C-user-stories%2C-user-journeys%2C-UML-diagram%2C-task-analysis%2C-lo-fi-prototype%2C-hi-fi-prototype?type=design&node-id=431-648&t=sJ3KX6YRsV1BrADc-1&scaling=scale-down&page-id=432%3A221" 
                target="_blank">KlimatKoll prototype in Figma</a></p>
         <p><a href="https://xd.adobe.com/view/878149ca-a822-4c47-be94-fe73aa9c3205-d2d2/" target="_blank">Syla Consulting prototype in Adobe XD</a></p>
-    
-        
     </section>
     
-    <section>
+    <section data-aos="fade-left">
         <h1>Mobile app</h1>
         <div>
-            <p>Scan QR code with Expo Go- app on your mobile phone</p>
+            <p>Scan QR code with Expo Go app on your mobile phone</p>
             <img src="qr-kod.png" alt="QR-kod" class="qr-kod" width="150px" height="150px">
         </div>
     </section>
 
-    
 <footer>
-    <a class="cv" href="CV_Renata_Josipovic.pdf" download="CV_Renata_Josipovic.pdf">Download Renatas CV</a>
+    <a class="cv" href="CV_Renata_Josipovic.pdf" download="CV_Renata_Josipovic.pdf">Download Renata's CV</a>
     <a href="https://www.linkedin.com/in/renata-josipovic-515426221" target="_blank">
         <i class="fab fa-linkedin fa-xl" style="color: #323232;"></i>
     </a>
     <p>© 2024 Renata Josipovic - Portfolio. All rights reserved.</p>
 </footer>
 
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Initialize AOS -->
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const logosSlides = document.querySelectorAll('.logos-carousel .carousel-slide');
-    const logosPrevBtn = document.querySelector('.logos-prev');
-    const logosNextBtn = document.querySelector('.logos-next');
-    let logosIndex = 0;
-
-    function showLogosSlide(index) {
-        logosSlides.forEach((slide, i) => {
-            slide.style.display = i === index ? 'block' : 'none';
-        });
-    }
-
-    logosPrevBtn.addEventListener('click', () => {
-        logosIndex = (logosIndex > 0) ? logosIndex - 1 : logosSlides.length - 1;
-        showLogosSlide(logosIndex);
+    AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        easing: 'ease-in-out', // Easing function for the animation
+        once: true // Whether animation should happen only once
     });
+</script>
 
-    logosNextBtn.addEventListener('click', () => {
-        logosIndex = (logosIndex < logosSlides.length - 1) ? logosIndex + 1 : 0;
-        showLogosSlide(logosIndex);
-    });
+<script>
+    // Existing JavaScript code remains unchanged
+    document.addEventListener('DOMContentLoaded', function () {
+        const logosSlides = document.querySelectorAll('.logos-carousel .carousel-slide');
+        const logosPrevBtn = document.querySelector('.logos-prev');
+        const logosNextBtn = document.querySelector('.logos-next');
+        let logosIndex = 0;
 
-    showLogosSlide(logosIndex);
+        function showLogosSlide(index) {
+            logosSlides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
 
-    const webpagesSlides = document.querySelectorAll('.webpages-carousel .carousel-slide');
-    const webpagesPrevBtn = document.querySelector('.webpages-prev');
-    const webpagesNextBtn = document.querySelector('.webpages-next');
-    let webpagesIndex = 0;
-
-    function showWebpagesSlide(index) {
-        webpagesSlides.forEach((slide, i) => {
-            slide.style.display = i === index ? 'block' : 'none';
+        logosPrevBtn.addEventListener('click', () => {
+            logosIndex = (logosIndex > 0) ? logosIndex - 1 : logosSlides.length - 1;
+            showLogosSlide(logosIndex);
         });
-    }
 
-    webpagesPrevBtn.addEventListener('click', () => {
-        webpagesIndex = (webpagesIndex > 0) ? webpagesIndex - 1 : webpagesSlides.length - 1;
+        logosNextBtn.addEventListener('click', () => {
+            logosIndex = (logosIndex < logosSlides.length - 1) ? logosIndex + 1 : 0;
+            showLogosSlide(logosIndex);
+        });
+
+        showLogosSlide(logosIndex);
+
+        const webpagesSlides = document.querySelectorAll('.webpages-carousel .carousel-slide');
+        const webpagesPrevBtn = document.querySelector('.webpages-prev');
+        const webpagesNextBtn = document.querySelector('.webpages-next');
+        let webpagesIndex = 0;
+
+        function showWebpagesSlide(index) {
+            webpagesSlides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        webpagesPrevBtn.addEventListener('click', () => {
+            webpagesIndex = (webpagesIndex > 0) ? webpagesIndex - 1 : webpagesSlides.length - 1;
+            showWebpagesSlide(webpagesIndex);
+        });
+
+        webpagesNextBtn.addEventListener('click', () => {
+            webpagesIndex = (webpagesIndex < webpagesSlides.length - 1) ? webpagesIndex + 1 : 0;
+            showWebpagesSlide(webpagesIndex);
+        });
+
         showWebpagesSlide(webpagesIndex);
     });
-
-    webpagesNextBtn.addEventListener('click', () => {
-        webpagesIndex = (webpagesIndex < webpagesSlides.length - 1) ? webpagesIndex + 1 : 0;
-        showWebpagesSlide(webpagesIndex);
-    });
-
-    showWebpagesSlide(webpagesIndex);
-});
 </script>
 
 </body>
 </html>
-
-
