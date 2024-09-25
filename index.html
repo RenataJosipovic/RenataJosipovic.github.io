@@ -9,150 +9,189 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://kit.fontawesome.com/045605d7ba.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
     
-<style>
-body {
-    font-family: 'League Spartan', sans-serif;
-    background-color: #DDD0C8;
-    color: #323232;
-    margin: 20px;
-    padding: 20px;
-}
-
-header {
-    background-color: #DDD0C8;
-    padding-top: 50px;
-    padding-bottom: 250px;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-section {
-    margin: 20px;
-    padding: 40px;
-    background-color: #DDD0C8;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centrera text inom sektioner */
-}
-
-h1 {
-    color: #323232;
-    text-align: center;
-}
-
-.logos img {
-    width: 245px;
-    height: 250px;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-
-.webpages img {
-    width: 450px;
-    height: 250px;
-    display: block;
-    margin: 0 auto;
-}
-
-.qr-kod img {
-    display: block;
-    margin: 0 auto;
-}
-
-.carousel-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
-    margin-top: 20px; 
-    margin-bottom: 20px;
-}
-
-.carousel-slide img {
-    display: block;
-    margin: 0 auto;
-}
-
-.prevBtn, .nextBtn {
-    margin: 0 5px;
-}
+    <style>
+    body {
+        font-family: 'League Spartan', sans-serif;
+        background-color: #DDD0C8;
+        color: #323232;
+        margin: 20px;
+        padding: 20px;
+    }
     
-.cv {
-    color: #323232;
-    text-align: center;
-    margin-left: 600px;
-    margin-right: 20px;
-    font-size: large;
-}
-
-p {
-    text-align: center;
-}
-
-button {
-    padding: 10px;
-    font-size: 25px;
-    border: none;
-    border-radius: 5px;
-    background-color: #DDD0C8;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #C0C0C0;
-}
-
-@media only screen and (max-width: 768px) {
     header {
-        padding-top: 80px;
-        padding-bottom: 100px;
-    }
-
-    .carousel-slide img {
-        max-width: 200px; /* Justera bildstorlek för mindre skärmar */
-    }
-
-    .webpages img {
-        max-width: 300px; /* Anpassa maxbredd för webbapplikationsbilder på mindre skärmar */
-    }
-
-    .cv {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    header {
+        background-color: #DDD0C8;
         padding-top: 50px;
-        padding-bottom: 70px;
+        padding-bottom: 250px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-
-    .logos img, .webpages img, .qr-kod img {
-        max-width: 100%; /* Full bredd för mindre skärmar */
+    
+    section {
+        margin: 20px;
+        padding: 40px;
+        background-color: #DDD0C8;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center; /* Centrera text inom sektioner */
     }
-
-    .carousel-slide img {
-        max-width: 150px; /* Justera bildstorlek för mycket små skärmar */
+    
+    h1 {
+        color: #323232;
+        text-align: center;
     }
-
+    
+    .logos img, .webpages img {
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .logos img:hover, .webpages img:hover {
+        transform: scale(1.1); /* Grows the image by 10% */
+    }
+    
+    .logos img, .webpages img {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .logos img {
+        width: 245px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+    
     .webpages img {
-        max-width: 250px; /* Anpassa maxbredd för webbapplikationsbilder på mycket små skärmar */
+        width: 450px;
+        height: 250px;
     }
-
+    
+    .qr-kod img {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .carousel-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+        margin-top: 20px; 
+        margin-bottom: 20px;
+    }
+    
+    .carousel-slide {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .carousel-slide img {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .prevBtn, .nextBtn {
+        margin: 0 5px;
+        background-color: #323232;
+        color: #ffffff;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .prevBtn:hover, .nextBtn:hover {
+        background-color: #555555;
+    }
+        
     .cv {
-        margin-left: 10px;
-        margin-right: 10px;
+        color: #323232;
+        text-align: center;
+        margin-left: 600px;
+        margin-right: 20px;
+        font-size: large;
     }
-</style>
+    
+    p {
+        text-align: center;
+    }
+    
+    button {
+        padding: 10px;
+        font-size: 25px;
+        border: none;
+        border-radius: 5px;
+        background-color: #DDD0C8;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: #C0C0C0;
+    }
+    
+    .project-description {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: none;
+        max-width: 500px;
+        text-align: left;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        header {
+            padding-top: 80px;
+            padding-bottom: 100px;
+        }
+    
+        .carousel-slide img {
+            max-width: 200px; /* Justera bildstorlek för mindre skärmar */
+        }
+    
+        .webpages img {
+            max-width: 300px; /* Anpassa maxbredd för webbapplikationsbilder på mindre skärmar */
+        }
+    
+        .cv {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+    
+    @media only screen and (max-width: 480px) {
+        header {
+            padding-top: 50px;
+            padding-bottom: 70px;
+        }
+    
+        .logos img, .webpages img, .qr-kod img {
+            max-width: 100%; /* Full bredd för mindre skärmar */
+        }
+    
+        .carousel-slide img {
+            max-width: 150px; /* Justera bildstorlek för mycket små skärmar */
+        }
+    
+        .webpages img {
+            max-width: 250px; /* Anpassa maxbredd för webbapplikationsbilder på mycket små skärmar */
+        }
+    
+        .cv {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+    </style>
 </head>
 <body>
 
@@ -161,32 +200,50 @@ button:hover {
         <img src="portfolio.png" alt="portfolio" width="550px" height="360px">
         <img src="arrow.svg" alt="arrow" width="100px" height="100px">
     </header>
-   
     
+   
     <section class="logos">
         <h1>Logotypes</h1>
         <p>Click the arrows to navigate through the logos.</p>
         <div class="carousel-container logos-carousel">
-            <button class="prevBtn logos-prev"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
+            <button class="prevBtn logos-prev"><i class="fa-solid fa-arrow-left"></i></button>
             <div class="carousel-slide">
                 <img src="Syla consulting.png" alt="Logotype 1">
+                <div class="project-description">
+                    <p><strong>Syla Consulting:</strong> A comprehensive branding solution for Syla Consulting, focusing on modern and clean design elements to represent the company's professionalism and expertise.</p>
+                </div>
             </div>
             <div class="carousel-slide">
                 <img src="BusyBee.png" alt="Logotype 2">
+                <div class="project-description">
+                    <p><strong>BusyBee:</strong> Designed a vibrant and playful logo for BusyBee, capturing the energetic and dynamic nature of the brand.</p>
+                </div>
             </div>
             <div class="carousel-slide">
                 <img src="riki copy.png" alt="Logotype 3">
+                <div class="project-description">
+                    <p><strong>Riki:</strong> Created a sleek and minimalist logotype for Riki, emphasizing simplicity and elegance.</p>
+                </div>
             </div>
             <div class="carousel-slide">
                 <img src="Agency.png" alt="Logotype 4">
+                <div class="project-description">
+                    <p><strong>Agency:</strong> Developed a professional and modern logotype for Agency, highlighting trust and reliability.</p>
+                </div>
             </div>
             <div class="carousel-slide">
                 <img src="MJ_logo.jpg" alt="Logotype 5">
+                <div class="project-description">
+                    <p><strong>MJ:</strong> Crafted a distinctive logotype for MJ, focusing on uniqueness and brand recognition.</p>
+                </div>
             </div>   
             <div class="carousel-slide">
-                <img src="2.jpg" alt="Logotype 5">
+                <img src="2.jpg" alt="Logotype 6">
+                <div class="project-description">
+                    <p><strong>Project 6:</strong> Description for the sixth logotype project.</p>
+                </div>
             </div>  
-            <button class="nextBtn logos-next"><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
+            <button class="nextBtn logos-next"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
     </section>
  
@@ -195,20 +252,26 @@ button:hover {
         <h1>Web pages and Web applications</h1>
         <p>Click the arrows to navigate through the web pages and applications.</p>
         <div class="carousel-container webpages-carousel">
-            <button class="prevBtn webpages-prev"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
+            <button class="prevBtn webpages-prev"><i class="fa-solid fa-arrow-left"></i></button>
             <div class="carousel-slide">
                 <p><a href="http://www.sylaconsulting.se" target="_blank">www.sylaconsulting.se</a></p>
                 <a href="http://www.sylaconsulting.se" target="_blank">
                     <img src="realistic_laptop_with_smartphone.svg" alt="webpage" width="450px" height="320px">
                 </a>
+                <div class="project-description">
+                    <p><strong>Syla Consulting Website:</strong> Developed a responsive and user-friendly website for Syla Consulting, showcasing their services and portfolio effectively.</p>
+                </div>
             </div>
             <div class="carousel-slide">
                 <p><a href="https://klimatkoll.github.io/KlimatKoll-App/" target="_blank">KlimatKoll</a></p>
                 <a href="https://klimatkoll.github.io/KlimatKoll-App/" target="_blank">
                     <img src="screenshot_webapp.png" alt="webapp" width="480px" height="250px">
                 </a>
+                <div class="project-description">
+                    <p><strong>KlimatKoll App:</strong> Designed and developed a climate tracking web application to help users monitor and reduce their carbon footprint.</p>
+                </div>
             </div>
-            <button class="nextBtn webpages-next"><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
+            <button class="nextBtn webpages-next"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
     </section>
 
@@ -238,51 +301,58 @@ button:hover {
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+    // Function to show slides
+    function showSlide(slides, index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'flex' : 'none';
+        });
+    }
+
+    // Logos Carousel
     const logosSlides = document.querySelectorAll('.logos-carousel .carousel-slide');
     const logosPrevBtn = document.querySelector('.logos-prev');
     const logosNextBtn = document.querySelector('.logos-next');
     let logosIndex = 0;
 
-    function showLogosSlide(index) {
-        logosSlides.forEach((slide, i) => {
-            slide.style.display = i === index ? 'block' : 'none';
-        });
-    }
+    showSlide(logosSlides, logosIndex);
 
     logosPrevBtn.addEventListener('click', () => {
         logosIndex = (logosIndex > 0) ? logosIndex - 1 : logosSlides.length - 1;
-        showLogosSlide(logosIndex);
+        showSlide(logosSlides, logosIndex);
     });
 
     logosNextBtn.addEventListener('click', () => {
         logosIndex = (logosIndex < logosSlides.length - 1) ? logosIndex + 1 : 0;
-        showLogosSlide(logosIndex);
+        showSlide(logosSlides, logosIndex);
     });
 
-    showLogosSlide(logosIndex);
-
+    // Webpages Carousel
     const webpagesSlides = document.querySelectorAll('.webpages-carousel .carousel-slide');
     const webpagesPrevBtn = document.querySelector('.webpages-prev');
     const webpagesNextBtn = document.querySelector('.webpages-next');
     let webpagesIndex = 0;
 
-    function showWebpagesSlide(index) {
-        webpagesSlides.forEach((slide, i) => {
-            slide.style.display = i === index ? 'block' : 'none';
-        });
-    }
+    showSlide(webpagesSlides, webpagesIndex);
 
     webpagesPrevBtn.addEventListener('click', () => {
         webpagesIndex = (webpagesIndex > 0) ? webpagesIndex - 1 : webpagesSlides.length - 1;
-        showWebpagesSlide(webpagesIndex);
+        showSlide(webpagesSlides, webpagesIndex);
     });
 
     webpagesNextBtn.addEventListener('click', () => {
         webpagesIndex = (webpagesIndex < webpagesSlides.length - 1) ? webpagesIndex + 1 : 0;
-        showWebpagesSlide(webpagesIndex);
+        showSlide(webpagesSlides, webpagesIndex);
     });
 
-    showWebpagesSlide(webpagesIndex);
+    // Toggle project descriptions on image click
+    document.querySelectorAll('.carousel-slide img').forEach(img => {
+        img.addEventListener('click', function() {
+            const description = this.parentElement.querySelector('.project-description');
+            if (description) {
+                description.style.display = description.style.display === "block" ? "none" : "block";
+            }
+        });
+    });
 });
 </script>
 
