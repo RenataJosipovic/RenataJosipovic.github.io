@@ -1,45 +1,45 @@
 document.addEventListener('DOMContentLoaded', function () {
-  let currentSlide = 0;
   const carouselContainers = document.querySelectorAll('.carousel-container');
 
   carouselContainers.forEach(container => {
     const slides = container.querySelectorAll('.carousel-slide');
     const totalSlides = slides.length;
+    let currentSlide = 0; // Unik currentSlide för varje karusell
 
+    // Funktion för att visa ett specifikt slide
     function showSlide(index) {
       slides.forEach((slide, i) => {
-        if (i === index) {
-          slide.style.display = 'block';
-        } else {
-          slide.style.display = 'none';
-        }
+        slide.style.display = i === index ? 'block' : 'none';
       });
     }
 
+    // Visa första bilden när sidan laddas
+    showSlide(currentSlide);
+
+    // Funktion för nästa slide
     function nextSlide() {
       currentSlide = (currentSlide + 1) % totalSlides;
       showSlide(currentSlide);
     }
 
+    // Funktion för föregående slide
     function prevSlide() {
       currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
       showSlide(currentSlide);
     }
 
-    // Show the first slide initially
-    showSlide(currentSlide);
-
-    // Event listeners for next and previous buttons
+    // Lägg till event listeners för nästa och föregående knappar
     container.querySelector('.nextBtn').addEventListener('click', nextSlide);
     container.querySelector('.prevBtn').addEventListener('click', prevSlide);
   });
 });
 
+// Script för att pausa videon när sidan laddas
 document.addEventListener('DOMContentLoaded', function () {
   var videoFrame = document.getElementById('videoFrame');
 
   if (videoFrame) {
-    // Pause the video when the page loads
+    // Pausa videon när sidan laddas
     videoFrame.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
   }
 });
