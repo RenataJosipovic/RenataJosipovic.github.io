@@ -100,7 +100,12 @@ body {
         display: block;
         margin: 0 auto;
     }
-    
+    .prototypes-carousel .carousel-slide {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
 .prevBtn, .nextBtn {
     margin: 0 5px;
     background-color: #D3D3D3, 
@@ -294,22 +299,24 @@ img.renata {
 
 
 
-    <section>
-        <h1>Prototypes</h1>
-        <p><a href="https://www.figma.com/proto/i4azN0R2dxPi7F37P1gdhf/Personas%2C-user-stories%2C-user-journeys%2C-UML-diagram%2C-task-analysis%2C-lo-fi-prototype%2C-hi-fi-prototype?type=design&node-id=431-648&t=sJ3KX6YRsV1BrADc-1&scaling=scale-down&page-id=432%3A221" 
-               target="_blank">KlimatKoll prototype in Figma</a></p>
-        <p><a href="https://xd.adobe.com/view/878149ca-a822-4c47-be94-fe73aa9c3205-d2d2/" target="_blank">Syla Consulting prototype in Adobe XD</a></p>  
-       <img src="prototype_mockup.png" alt="prototype" width="480px" height="250px">
-        <img src="klimatkoll_prototype.png" alt="prototype" width="480px" height="250px">
-    </section>
-
-    <section>
-        <h1>Mobile app</h1>
-        <div>
-            <p>Scan QR code with Expo Go- app on your mobile phone</p>
-            <img src="qr-kod.png" alt="QR-kod" class="qr-kod" width="150px" height="150px">
+<section class="prototypes">
+    <h1>Prototypes</h1>
+    <p>Click the arrows to navigate through the prototypes.</p>
+    <div class="carousel-container prototypes-carousel">
+        <button class="prevBtn prototypes-prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="carousel-slide">
+            <a href="https://www.figma.com/proto/i4azN0R2dxPi7F37P1gdhf/Personas%2C-user-stories%2C-user-journeys%2C-UML-diagram%2C-task-analysis%2C-lo-fi-prototype%2C-hi-fi-prototype?type=design&node-id=431-648&t=sJ3KX6YRsV1BrADc-1&scaling=scale-down&page-id=432%3A221" 
+               target="_blank">KlimatKoll prototype in Figma</a>
+            <img src="prototype_mockup.png" alt="Prototype 1" width="480px" height="250px">
         </div>
-    </section>
+        <div class="carousel-slide">
+            <a href="https://xd.adobe.com/view/878149ca-a822-4c47-be94-fe73aa9c3205-d2d2/" target="_blank">Syla Consulting prototype in Adobe XD</a>
+            <img src="klimatkoll_prototype.png" alt="Prototype 2" width="480px" height="250px">
+        </div>
+        <button class="nextBtn prototypes-next"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+</section>
+
  
 <footer>
     <img class="renata" src="Renata.svg" alt="photo of Renata" width="350px" height="350px">
