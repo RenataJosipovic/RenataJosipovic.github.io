@@ -48,7 +48,68 @@
         h1, h2 {
             font-weight: 700;
         }
+/* Media Queries for tablets and smaller devices */
+        @media only screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
 
+            h1 {
+                font-size: 1.8rem; /* Slightly smaller heading for tablets */
+            }
+
+            h2 {
+                font-size: 1.4rem; /* Smaller subheading */
+            }
+
+            p {
+                font-size: 1rem; /* Smaller paragraph text */
+            }
+
+            .project-details {
+                padding: 10px;
+            }
+
+            img {
+                max-width: 90%; /* Reduce image size slightly on smaller screens */
+            }
+
+            .cards-container {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Media Queries for mobile phones and smaller screens */
+        @media only screen and (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem; /* Further reduce heading size */
+            }
+
+            h2 {
+                font-size: 1.2rem; /* Smaller subheading size */
+            }
+
+            p {
+                font-size: 0.9rem; /* Reduce paragraph text size */
+            }
+
+            .button {
+                padding: 8px 16px; /* Smaller buttons on mobile */
+                font-size: 14px; /* Smaller font size for buttons */
+            }
+
+            img {
+                max-width: 100%; /* Make sure images take up full width */
+            }
+
+            .cards-container {
+                margin-bottom: 15px;
+            }
+
+            .project-details {
+                padding: 5px; /* Further reduce padding on small screens */
+            }
+        }
     </style>
 </head>
 <body>
