@@ -10,186 +10,144 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://kit.fontawesome.com/045605d7ba.js" crossorigin="anonymous"></script>
     
-<style>
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-image: url('background.jpg');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    color: #323232;
-    margin: 20px;
-    padding: 20px;
-}
-    
-header {
-        background-color: rgba(221, 208, 200, 0.2);
-        padding-top: 50px;
-        padding-bottom: 250px;
-        margin-top: 30px;
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border-radius: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            color: #323232;
+            margin: 0;
+            padding: 20px;
+        }
 
-h1, h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-}
-    
-.logos img {
-        width: 245px;
-        height: 250px;
-        margin-bottom: 20px;
-    }
-    
-.webpages img {
-        width: 450px;
-        height: 250px;
-    }
-    
-    
-.cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
+        header {
+            background-color: rgba(221, 208, 200, 0.2);
+            padding-top: 50px;
+            padding-bottom: 250px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-.card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+        h1, h2 {
+            font-weight: 700;
+            text-align: center;
+        }
 
-}
+        .webpages img {
+            max-width: 100%;
+            height: auto;
+        }
 
-.card img {
-    width: 100%;
-    height: auto;
-}
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
 
-.card-content {
-    padding: 20px;
-}
-        
-.cv {
-        color: #323232;
-        text-align: center;
-        margin-left: 600px;
-        margin-right: 20px;
-        font-size: large;
-    }
-    
-p {
-        text-align: center;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        line-height: 1.8;
-    }
-    
-img.renata {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
 
-.button {
-    display: inline-block; /* Makes it behave like a button */
-    padding: 10px 20px; /* Adds padding for a button-like feel */
-    background-color: #d3d3d3; /* Light gray background */
-    color: #323232; /* Text color */
-    text-decoration: none; /* Remove underline */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Font size for readability */
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 0.05em;
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-}
+        .card img {
+            width: 100%;
+            height: auto;
+        }
 
-.button:hover {
-    background-color: #b0b0b0; /* Darker gray on hover */
-    color: #000; /* Optional: darker text color on hover */
-}
+        .card-content {
+            padding: 20px;
+        }
 
-        
-/* Styles for screens smaller than 768px */
-@media only screen and (max-width: 768px) {
-    header {
-        padding-top: 80px;
-        padding-bottom: 100px;
-        margin-left: 10px;
-        margin-right: 10px; /* Add margin for better spacing on smaller screens */
-    }
+        .cv {
+            color: #323232;
+            text-align: center;
+            margin: 0;
+            font-size: large;
+        }
 
-    h1 {
-        font-size: 1.5rem; /* Adjust heading size for smaller screens */
-    }
+        p {
+            text-align: center;
+            line-height: 1.8;
+        }
 
-    .cards-container {
-        flex-direction: column; /* Stack cards vertically for smaller screens */
-        gap: 15px; /* Reduce gap between cards */
-    }
+        img.renata {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    .card {
-        width: 90%; /* Make the cards take up more width on mobile */
-        margin: 0 auto; /* Center the cards */
-    }
+        /* Styles for screens smaller than 768px */
+        @media only screen and (max-width: 768px) {
+            header {
+                padding-top: 50px;
+                padding-bottom: 150px;
+                margin: 10px;
+            }
 
-    .webpages img {
-        max-width: 100%; /* Make images responsive to fill available width */
-        height: auto; /* Maintain aspect ratio */
-    }
+            h1, h2 {
+                font-size: 1.5rem;
+            }
 
-    .cv {
-        margin-left: 20px;
-        margin-right: 20px;
-        font-size: 0.9rem; /* Adjust text size */
-    }
+            .cards-container {
+                flex-direction: column;
+                gap: 15px;
+            }
 
-    p {
-        font-size: 0.9rem; /* Adjust paragraph text size */
-    }
-}
+            .card {
+                width: 90%;
+                margin: 0 auto;
+            }
 
-/* Styles for screens smaller than 480px */
-@media only screen and (max-width: 480px) {
-    header {
-        padding-top: 50px;
-        padding-bottom: 70px;
-        margin-left: 5px;
-        margin-right: 5px; /* Further reduce margins */
-    }
+            .cv {
+                margin: 0;
+                font-size: 0.9rem;
+            }
 
-    h1 {
-        font-size: 1.2rem; /* Further reduce heading size for very small screens */
-    }
+            p {
+                font-size: 0.9rem;
+            }
+        }
 
-    .card {
-        width: 100%; /* Ensure the card takes up full width */
-    }
+        /* Styles for screens smaller than 480px */
+        @media only screen and (max-width: 480px) {
+            header {
+                padding-top: 30px;
+                padding-bottom: 100px;
+                margin: 5px;
+            }
 
-    .cv {
-        margin-left: 10px;
-        margin-right: 10px;
-        font-size: 0.8rem; /* Adjust text size for very small screens */
-    }
+            h1, h2 {
+                font-size: 1.2rem;
+            }
 
-    p {
-        font-size: 0.8rem; /* Adjust paragraph text size */
-    }
-}
+            .card {
+                width: 100%;
+                margin: 10px 0;
+            }
 
-</style>
+            .cv {
+                font-size: 0.8rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
+
+    </style>
 </head>
     
 <body>
@@ -198,41 +156,40 @@ img.renata {
         <img src="arrow.svg" alt="arrow" width="100px" height="100px">
     </header>
     
-<div class="cards-container">
-    <div class="card" onclick="window.location.href='logotypes.html'">
-        <img src="logotypes.png" alt="Logotypes">
-        <div class="card-content">
-            <h2>Logotypes</h2>
-            <p>Explore the creative and professional logotype designs.</p>
+    <div class="cards-container">
+        <div class="card" onclick="window.location.href='logotypes.html'">
+            <img src="logotypes.png" alt="Logotypes">
+            <div class="card-content">
+                <h2>Logotypes</h2>
+                <p>Explore the creative and professional logotype designs.</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='webpages.html'">
+            <img src="webpages.png" alt="Web pages and Web applications">
+            <div class="card-content">
+                <h2>Web pages and Web applications</h2>
+                <p>Discover responsive websites and web applications.</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='prototypes.html'">
+            <img src="prototypes.png" alt="Prototypes">
+            <div class="card-content">
+                <h2>Prototypes</h2>
+                <p>View various hi-fi prototypes for apps and websites.</p>
+            </div>
         </div>
     </div>
 
-    <div class="card" onclick="window.location.href='webpages.html'">
-        <img src="webpages.png" alt="Web pages and Web applications">
-        <div class="card-content">
-            <h2>Web pages and Web applications</h2>
-            <p>Discover responsive websites and web applications.</p>
-        </div>
-    </div>
-
-    <div class="card" onclick="window.location.href='prototypes.html'">
-        <img src="prototypes.png" alt="Prototypes">
-        <div class="card-content">
-            <h2>Prototypes</h2>
-            <p>View various hi-fi prototypes for apps and websites.</p>
-        </div>
-    </div>
-</div>
-
-
-<footer>
-    <img class="renata" src="Renata.svg" alt="photo of Renata" width="350px" height="350px">
-    <a class="cv" href="CV_Renata_Josipovic.pdf" download="CV_Renata_Josipovic.pdf">Download Renatas CV</a>
-    <a href="https://www.linkedin.com/in/renata-josipovic-515426221" target="_blank">
-        <i class="fab fa-linkedin fa-xl" style="color: #323232;"></i>
-    </a>
-    <p>© 2024 Renata Josipovic - Portfolio. All rights reserved.</p>
-</footer>
+    <footer>
+        <img class="renata" src="Renata.svg" alt="photo of Renata" width="350px" height="350px">
+        <a class="cv" href="CV_Renata_Josipovic.pdf" download="CV_Renata_Josipovic.pdf">Download Renatas CV</a>
+        <a href="https://www.linkedin.com/in/renata-josipovic-515426221" target="_blank">
+            <i class="fab fa-linkedin fa-xl" style="color: #323232;"></i>
+        </a>
+        <p>© 2024 Renata Josipovic - Portfolio. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
