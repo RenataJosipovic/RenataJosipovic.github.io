@@ -81,48 +81,31 @@ body {
         margin: 0 auto;
     }
     
-    .carousel-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        overflow: hidden;
-        margin-top: 20px; 
-        margin-bottom: 20px;
-    }
-    
-    .carousel-slide {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .carousel-slide img {
-        display: block;
-        margin: 0 auto;
-    }
-
-
-.prevBtn, .nextBtn {
-    margin: 0 5px;
-   
-    color: #fff; 
-    border: 2px solid #fff;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+ .cards-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center; 
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    gap: 20px;
 }
 
-.prevBtn:hover, .nextBtn:hover {
-
-    color: #fff; 
-    border-color: #A9A9A9;
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 20px;
+}
         
     .cv {
         color: #323232;
@@ -223,54 +206,59 @@ img.renata {
         <img src="arrow.svg" alt="arrow" width="100px" height="100px">
     </header>
     
-   
-    <section class="logos">
-        <h1>Logotypes</h1>
-        <p>Click the arrows to navigate through the logos.<br> Click on the logo to read a description.</p>
-        <div class="carousel-container logos-carousel">
-            <button class="prevBtn logos-prev"><i class="fa-solid fa-arrow-left"></i></button>
-            <div class="carousel-slide">
-                <img src="Syla consulting.png" alt="Logotype 1">
-                <div class="project-description">
-                    <p><strong>Syla Consulting:</strong> A comprehensive branding solution for Syla Consulting, focusing on modern and clean design elements to represent the company's professionalism and expertise.</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="BusyBee.png" alt="Logotype 2">
-                <div class="project-description">
-                    <p><strong>BusyBee:</strong> Designed a vibrant and playful logo for BusyBee, capturing the energetic and dynamic nature of the brand.</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="riki copy.png" alt="Logotype 3">
-                <div class="project-description">
-                    <p><strong>Riki:</strong> Created a sleek and minimalist logotype for a hobby site Riki Brush, emphasizing simplicity and creativity.</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="Agency.png" alt="Logotype 4">
-                <div class="project-description">
-                    <p><strong>Agency:</strong> Developed a professional and modern logotype for Agency, highlighting trust and reliability.</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="MJ_logo.jpg" alt="Logotype 5">
-                <div class="project-description">
-                    <p><strong>MJ:</strong> Crafted a distinctive logotype for MJ, focusing on uniqueness and brand recognition.</p>
-                </div>
-            </div>   
-            <div class="carousel-slide">
-                <img src="2.jpg" alt="Moondust">
-                <div class="project-description">
-                    <p><strong>Moondust:</strong>Logotype project for leisure school.</p>
-                </div>
-            </div>  
-            <button class="nextBtn logos-next"><i class="fa-solid fa-arrow-right"></i></button>
+<div class="cards-container">
+    <div class="card">
+        <img src="Syla consulting.png" alt="Syla Consulting">
+        <div class="card-content">
+            <h2>Syla Consulting</h2>
+            <p>En omfattande brandinglösning för Syla Consulting.</p>
         </div>
-    </section>
+    </div>
+
+    <div class="card">
+        <img src="BusyBee.png" alt="BusyBee">
+        <div class="card-content">
+            <h2>BusyBee</h2>
+            <p>Designade en livlig och lekfull logotyp för BusyBee.</p>
+        </div>
+    </div>
+
+     <div class="card">
+        <img src="riki copy.png" alt="Logotype 3">
+        <div class="card-content">
+            <h2>Riki's brush</h2>
+            <p>Created a sleek and minimalist logotype for a hobby site Riki Brush, emphasizing simplicity and creativity.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Agency.png" alt="Logotype 4">
+        <div class="card-content">
+            <h2>Booking Agency</h2>
+            <p>Developed a professional and modern logotype for Agency, highlighting trust and reliability.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="MJ_logo.jpg" alt="Logotype 5>
+        <div class="card-content">
+            <h2>MJ</h2>
+            <p>Crafted a distinctive logotype for MJ, focusing on uniqueness and brand recognition.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="2.jpg" alt="Moondust">
+        <div class="card-content">
+            <h2>Moondust</h2>
+            <p>Logotype project for leisure school.</p>
+        </div>
+    </div>
+</div>
  
 
-<section>
+<div class="cards-container">
+    <div class="card">
     <h1>Web pages and Web applications</h1>
     <p>Click the arrows to navigate through the web pages and applications.</p>
     <div class="carousel-container webpages-carousel">
