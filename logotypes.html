@@ -78,6 +78,67 @@
             background-color: #b0b0b0;
             color: #000;
         }
+
+                /* Media Queries for Tablets and Smaller Devices */
+        @media only screen and (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem; /* Reduce size of the main heading */
+            }
+
+            h2 {
+                font-size: 1.4rem; /* Reduce size of subheadings */
+            }
+
+            .project-details {
+                padding: 10px;
+            }
+
+            .card {
+                width: 90%; /* Make cards wider on smaller screens */
+                margin: 0 auto; /* Center the cards */
+            }
+
+            .cards-container {
+                gap: 15px; /* Reduce gap between cards */
+            }
+
+            p {
+                font-size: 1rem; /* Reduce text size */
+            }
+        }
+
+        /* Media Queries for Mobile Phones */
+        @media only screen and (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem; /* Further reduce main heading size */
+            }
+
+            h2 {
+                font-size: 1.2rem; /* Further reduce subheading size */
+            }
+
+            .project-details {
+                padding: 5px;
+            }
+
+            .card {
+                width: 100%; /* Full width cards on mobile */
+            }
+
+            p {
+                font-size: 0.9rem; /* Smaller paragraph text */
+            }
+
+            .button {
+                padding: 8px 16px; /* Smaller buttons */
+                font-size: 14px; /* Reduce button font size */
+            }
+
+            .cards-container {
+                flex-direction: column; /* Stack the cards vertically */
+                gap: 10px; /* Less gap between stacked cards */
+            }
+        }
     </style>
 </head>
 <body>
