@@ -29,6 +29,7 @@ header {
         margin-top: 30px;
         margin-left: 20px;
         margin-right: 20px;
+        margin-bottom: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -42,19 +43,7 @@ h1 {
         text-align: center;
     }
     
-.logos img, .webpages img {
-        transition: transform 0.3s ease;
-        cursor: pointer;
-    }
-    
-.logos img:hover, .webpages img:hover {
-        transform: scale(1.1); /* Grows the image by 10% */
-    }
-    
-.logos img, .webpages img {
-        display: block;
-        margin: 0 auto;
-    }
+
     
 .logos img {
         width: 245px;
@@ -67,10 +56,6 @@ h1 {
         height: 250px;
     }
     
-.qr-kod img {
-        display: block;
-        margin: 0 auto;
-    }
     
 .cards-container {
     display: flex;
@@ -87,6 +72,7 @@ h1 {
     text-align: center;
     overflow: hidden;
     transition: transform 0.3s ease;
+
 }
 
 .card img {
@@ -116,49 +102,73 @@ img.renata {
     margin-right: auto;
 }
         
+/* Styles for screens smaller than 768px */
 @media only screen and (max-width: 768px) {
-        header {
-            padding-top: 80px;
-            padding-bottom: 100px;
-        }
-    
-        .carousel-slide img {
-            max-width: 200px; /* Justera bildstorlek för mindre skärmar */
-        }
-    
-        .webpages img {
-            max-width: 300px; /* Anpassa maxbredd för webbapplikationsbilder på mindre skärmar */
-        }
-    
-        .cv {
-            margin-left: 20px;
-            margin-right: 20px;
-        }
+    header {
+        padding-top: 80px;
+        padding-bottom: 100px;
+        margin-left: 10px;
+        margin-right: 10px; /* Add margin for better spacing on smaller screens */
     }
 
-@media only screen and (max-width: 480px) {
-        header {
-            padding-top: 50px;
-            padding-bottom: 70px;
-        }
-    
-        .logos img, .webpages img, .qr-kod img {
-            max-width: 100%; /* Full bredd för mindre skärmar */
-        }
-    
-        .carousel-slide img {
-            max-width: 150px; /* Justera bildstorlek för mycket små skärmar */
-        }
-    
-        .webpages img {
-            max-width: 250px; /* Anpassa maxbredd för webbapplikationsbilder på mycket små skärmar */
-        }
-    
-        .cv {
-            margin-left: 10px;
-            margin-right: 10px;
-        }
+    h1 {
+        font-size: 1.5rem; /* Adjust heading size for smaller screens */
     }
+
+    .cards-container {
+        flex-direction: column; /* Stack cards vertically for smaller screens */
+        gap: 15px; /* Reduce gap between cards */
+    }
+
+    .card {
+        width: 90%; /* Make the cards take up more width on mobile */
+        margin: 0 auto; /* Center the cards */
+    }
+
+    .webpages img {
+        max-width: 100%; /* Make images responsive to fill available width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .cv {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 0.9rem; /* Adjust text size */
+    }
+
+    p {
+        font-size: 0.9rem; /* Adjust paragraph text size */
+    }
+}
+
+/* Styles for screens smaller than 480px */
+@media only screen and (max-width: 480px) {
+    header {
+        padding-top: 50px;
+        padding-bottom: 70px;
+        margin-left: 5px;
+        margin-right: 5px; /* Further reduce margins */
+    }
+
+    h1 {
+        font-size: 1.2rem; /* Further reduce heading size for very small screens */
+    }
+
+    .card {
+        width: 100%; /* Ensure the card takes up full width */
+    }
+
+    .cv {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 0.8rem; /* Adjust text size for very small screens */
+    }
+
+    p {
+        font-size: 0.8rem; /* Adjust paragraph text size */
+    }
+}
+
 
 </style>
 </head>
