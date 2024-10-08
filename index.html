@@ -20,12 +20,12 @@
             color: #323232;
             margin: 0;
             padding: 20px;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
         header {
-            background-color: rgba(221, 208, 200, 0.2);
-            padding-top: 20px;
-            padding-bottom: 230px;
+            background-color: rgba(221, 208, 200, 0.8);
+            padding: 20px 10px 150px;
             margin: 10px;
             display: flex;
             flex-direction: column;
@@ -38,6 +38,7 @@
         h1, h2 {
             font-weight: 700;
             text-align: center;
+            font-size: 2.5vw; /* Responsive font size */
         }
 
         .cards-container {
@@ -51,7 +52,8 @@
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: calc(33.33% - 20px); /* Responsive card width */
+            min-width: 250px; /* Minimum width for cards */
             text-align: center;
             overflow: hidden;
             transition: transform 0.3s ease;
@@ -60,12 +62,13 @@
         .card img {
             width: 100%;
             height: auto;
+            max-height: 200px; /* Limit the height for images */
+            object-fit: cover; /* Maintain aspect ratio */
         }
 
         .card-content {
             padding: 20px;
         }
-
 
         .cv {
             text-align: center;
@@ -76,14 +79,17 @@
         p {
             text-align: center;
             line-height: 1.8;
+            font-size: 1.2vw; /* Responsive font size */
         }
 
         img.renata {
             display: block;
             margin-left: auto;
             margin-right: auto;
+            max-width: 100%; /* Ensure image does not overflow */
+            height: auto;
         }
-        
+
         footer {
             display: flex;
             justify-content: center; /* Centers items horizontally */
@@ -92,17 +98,14 @@
             padding: 20px;
         }
 
-        
-    /* Styles for screens smaller than 768px */
+        /* Styles for screens smaller than 768px */
         @media only screen and (max-width: 768px) {
             header {
-                padding-top: 20px;
-                padding-bottom: 150px;
-                margin: 10px;
+                padding-bottom: 100px;
             }
 
             h1, h2 {
-                font-size: 1.5rem;
+                font-size: 2rem; /* Slightly smaller font size */
             }
 
             .cards-container {
@@ -116,38 +119,35 @@
             }
 
             .cv {
-                margin: 0;
-                font-size: 0.9rem;
+                font-size: 1rem; /* Responsive font size */
             }
 
             p {
-                font-size: 0.9rem;
+                font-size: 1rem; /* Responsive font size */
             }
         }
 
         /* Styles for screens smaller than 480px */
         @media only screen and (max-width: 480px) {
             header {
-                padding-top: 30px;
-                padding-bottom: 100px;
-                margin: 5px;
+                padding-bottom: 50px; /* Reduced padding */
             }
 
             h1, h2 {
-                font-size: 1.2rem;
+                font-size: 1.5rem; /* Smaller font size */
             }
 
             .card {
-                width: 100%;
-                margin: 10px 0;
+                width: 100%; /* Full width for cards */
+                margin: 10px 0; /* Margin adjustment */
             }
 
             .cv {
-                font-size: 0.8rem;
+                font-size: 0.9rem; /* Smaller font size */
             }
 
             p {
-                font-size: 0.8rem;
+                font-size: 0.9rem; /* Smaller font size */
             }
         }
 
@@ -156,9 +156,9 @@
     
 <body>
     <header>
-        <img class="renata" src="Renata.svg" alt="photo of Renata" width="500px" height="500px">
-        <img src="portfolio.png" alt="portfolio" width="550px" height="360px">
-        <img src="arrow.svg" alt="arrow" width="100px" height="100px">
+        <img class="renata" src="Renata.svg" alt="photo of Renata">
+        <img src="portfolio.png" alt="portfolio">
+        <img src="arrow.svg" alt="arrow">
     </header>
     
     <div class="cards-container">
