@@ -87,10 +87,11 @@
         }
 
         img.portfolio {
-            width: 450px;
-            height: 300px;
-            
+            width: 100%;
+            height: auto;
+            max-width: 450px; /* Limit max size for large screens */
         }
+
         .button {
             display: inline-block;
             padding: 10px 20px;
@@ -103,10 +104,12 @@
             letter-spacing: 0.05em;
             transition: background-color 0.3s ease;
         }
+        
         .button:hover {
             background-color: #ffffff; 
             color: #6e6e6e;
         }
+
         footer {
             display: flex;
             justify-content: center;
@@ -166,8 +169,17 @@
             p {
                 font-size: 0.9rem; /* Smaller font size */
             }
-        }
 
+            img.portfolio {
+                width: 100%; /* Full width for small screens */
+                height: auto; /* Maintain aspect ratio */
+            }
+
+            .button {
+                padding: 15px 25px; /* Larger padding for better touch experience */
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
     
