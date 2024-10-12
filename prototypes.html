@@ -24,8 +24,10 @@
         }
 
         img {
-            max-width: 100%;
+            max-width: 80%; /* Reduce image size */
             height: auto;
+            display: block;
+            margin: 20px auto; /* Center images */
         }
 
         .button {
@@ -48,7 +50,8 @@
         h1, h2 {
             font-weight: 700;
         }
-/* Media Queries for tablets and smaller devices */
+
+        /* Media Queries for tablets and smaller devices */
         @media only screen and (max-width: 768px) {
             body {
                 padding: 10px;
@@ -71,7 +74,7 @@
             }
 
             img {
-                max-width: 90%; /* Reduce image size slightly on smaller screens */
+                max-width: 70%; /* Further reduce image size on tablets */
             }
 
             .cards-container {
@@ -99,7 +102,7 @@
             }
 
             img {
-                max-width: 100%; /* Make sure images take up full width */
+                max-width: 90%; /* Ensure images take up more space but still smaller on mobile */
             }
 
             .cards-container {
@@ -126,7 +129,7 @@
                 <img src="klimatkoll_prototype.png" alt="KlimatKoll Prototype">
             </div>
         </div>
-
+        <br>
         <div class="card">
             <div class="card-content">
                 <h2>Syla Consulting Prototype</h2>
@@ -135,7 +138,7 @@
                 <img src="syla_consulting_prototype.png" alt="Syla Consulting Prototype">
             </div>
         </div>
-
+        <br>
         <div class="card">
             <div class="card-content">
                 <h2>Fashion store prototype in Figma</h2>
@@ -144,7 +147,7 @@
                 <img src="prototype_1.png" alt="App prototype">
             </div>
         </div>
-
+        <br>
         <div class="card">
             <div class="card-content">
                 <h2>Retreat hotel prototype in Figma</h2>
