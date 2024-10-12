@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/045605d7ba.js" crossorigin="anonymous"></script>
+    
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            color: #323232;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
 
+
+
+        h1, h2 {
+            font-weight: 700;
+            text-align: center;
+            font-size: 2vw; /* Responsive font size */
+        }
+
+
+        p {
+            text-align: center;
+            line-height: 1.8;
+            font-size: 1.2vw; /* Responsive font size */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #d3d3d3;
+            color: #323232;
+            text-decoration: none;
+            border-radius: 15px;
+            font-size: 16px;
+            letter-spacing: 0.05em;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #b0b0b0;
+            color: #000;
+        }
+        footer {
+            display: flex;
+            justify-content: center; /* Centers items horizontally */
+            align-items: center; /* Centers items vertically (if needed) */
+            flex-direction: column; /* Stacks elements vertically */
+            padding: 20px;
+        }
+
+        /* Styles for screens smaller than 768px */
+        @media only screen and (max-width: 768px) {
+            header {
+                padding-bottom: 100px;
+            }
+
+            h1, h2 {
+                font-size: 2rem; /* Slightly smaller font size */
+            }
+
+            .cards-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .card {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .cv {
+                font-size: 1rem; /* Responsive font size */
+            }
+
+            p {
+                font-size: 1rem; /* Responsive font size */
+            }
+        }
+
+        /* Styles for screens smaller than 480px */
+        @media only screen and (max-width: 480px) {
+            header {
+                padding-bottom: 50px; /* Reduced padding */
+            }
+
+            h1, h2 {
+                font-size: 1.5rem; /* Smaller font size */
+            }
+
+            .card {
+                width: 100%; /* Full width for cards */
+                margin: 10px 0; /* Margin adjustment */
+            }
+
+            .cv {
+                font-size: 0.9rem; /* Smaller font size */
+            }
+
+            p {
+                font-size: 0.9rem; /* Smaller font size */
+            }
+        }
+
+    </style>
+</head>
+    
+<body>
+  <h1>About me</h1>
+<p>My name is Renata Josipovic.</p>
+
+    <footer>
+        <a class="cv" href="CV_Renata_Josipovic.pdf" download="CV_Renata_Josipovic.pdf">Download Renatas CV</a><br>
+        <a href="https://www.linkedin.com/in/renata-josipovic-515426221" target="_blank">
+            <i class="fab fa-linkedin fa-xl" style="color: #323232;"></i>
+        </a>
+        <p>© 2024 Renata Josipovic - Portfolio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
