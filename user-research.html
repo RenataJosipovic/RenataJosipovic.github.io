@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/045605d7ba.js" crossorigin="anonymous"></script>
+    
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            color: #323232;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
 
+        header {
+            background-color: rgba(221, 208, 200, 0.3);
+            margin: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            font-weight: 700;
+            text-align: center;
+            font-size: 2vw; /* Responsive font size */
+        }
+
+        p {
+            text-align: center;
+            line-height: 1.8;
+            font-size: 1.2vw; /* Responsive font size */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #b0b0b0;
+            color: #ffffff; 
+            text-decoration: none;
+            border-radius: 15px;
+            font-size: 16px;
+            font-weight: bold; 
+            letter-spacing: 0.05em;
+            transition: background-color 0.3s ease;
+        }
+        
+        .button:hover {
+            background-color: #ffffff; 
+            color: #6e6e6e;
+        }
+
+
+        /* Styles for screens smaller than 768px */
+        @media only screen and (max-width: 768px) {
+            header {
+                padding-bottom: 100px;
+            }
+
+            h1, h2 {
+                font-size: 2rem; /* Slightly smaller font size */
+            }
+
+            p {
+                font-size: 1rem; /* Responsive font size */
+            }
+        }
+
+        /* Styles for screens smaller than 480px */
+        @media only screen and (max-width: 480px) {
+            header {
+                padding-bottom: 50px; /* Reduced padding */
+            }
+
+            h1, h2 {
+                font-size: 1.5rem; /* Smaller font size */
+            }
+
+
+            p {
+                font-size: 0.9rem; /* Smaller font size */
+            }
+
+            .button {
+                padding: 15px 25px; /* Larger padding for better touch experience */
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+    
+<body>
+
+
+</body>
+</html>
