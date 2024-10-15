@@ -47,7 +47,7 @@
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            flex-basis: calc(33.33% - 40px); /* Adjust to fit 3 cards per row */
             text-align: center;
             overflow: hidden;
             transition: transform 0.3s ease;
@@ -79,7 +79,7 @@
             color: #000;
         }
 
-                /* Media Queries for Tablets and Smaller Devices */
+        /* Media Queries for Tablets and Smaller Devices */
         @media only screen and (max-width: 768px) {
             h1 {
                 font-size: 1.8rem; /* Reduce size of the main heading */
@@ -94,8 +94,7 @@
             }
 
             .card {
-                width: 90%; /* Make cards wider on smaller screens */
-                margin: 0 auto; /* Center the cards */
+                flex-basis: calc(50% - 30px); /* 2 cards per row on tablet-sized screens */
             }
 
             .cards-container {
@@ -122,7 +121,7 @@
             }
 
             .card {
-                width: 100%; /* Full width cards on mobile */
+                flex-basis: 100%; /* Full width cards on mobile */
             }
 
             p {
@@ -156,7 +155,7 @@
         </div>
 
         <div class="card">
-            <img src="Atelier_evelyn_logo.svg" alt="Atelier_evelyn">
+            <img src="Atelier_evelyn_logo.svg" alt="Atelier Evelyn">
             <div class="card-content">
                 <h2>Atelier Evelyn</h2>
                 <p>The logo establishes the fashion brand's identity, reflecting its elegance and enhancing recognition.</p>
@@ -195,9 +194,8 @@
             </div>
         </div>
     </div>
-<br>  
-<p><a href="index.html" class="button">Navigate back to portfolio</a></p>
-
+    <br>  
+    <p><a href="index.html" class="button">Navigate back to portfolio</a></p>
 </div>
 
 </body>
