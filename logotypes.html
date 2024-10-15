@@ -34,27 +34,21 @@
         .sections-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center; /* Center all sections */
-            gap: 20px; /* Larger gap between sections */
+            justify-content: center; /* Center sections in the container */
+            gap: 20px; /* Space between sections */
             margin-left: 20px;
             margin-right: 20px;
         }
 
         section {
             background-color: rgba(255, 255, 255, 0.3); /* White with opacity */
-            padding: 30px; /* More padding for larger sections */
+            padding: 30px;
             border-radius: 10px;
-            flex-basis: calc(24% - 30px); /* Adjusted to ensure sections take up more space */
+            flex-basis: calc(24% - 30px); /* Same width for all sections */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
             text-align: center;
             transition: transform 0.3s ease;
             box-sizing: border-box;
-        }
-
-        .sections-container section:nth-child(5),
-        .sections-container section:nth-child(6),
-        .sections-container section:nth-child(7) {
-            flex-basis: calc(31% - 30px); /* Increase width of second row sections */
         }
 
         section img {
