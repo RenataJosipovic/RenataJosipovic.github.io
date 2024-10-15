@@ -31,35 +31,28 @@
             margin: 0 auto;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .cards-container {
+        .sections-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+            justify-content: space-between;
+            gap: 20px; /* Gap between sections */
         }
 
-.card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex-basis: calc(23% - 20px); /* Slightly more width per card */
-    text-align: center;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
+        section {
+            background-color: rgba(255, 255, 255, 0.3); /* White with opacity */
+            padding: 20px;
+            border-radius: 10px;
+            flex-basis: calc(23% - 20px); /* 4 sections per row */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-sizing: border-box;
+        }
 
-        .card img {
+        section img {
             width: 100%;
             height: auto;
-        }
-
-        .card-content {
-            padding: 20px;
+            margin-bottom: 15px;
         }
 
         .button {
@@ -81,61 +74,19 @@
 
         /* Media Queries for Tablets and Smaller Devices */
         @media only screen and (max-width: 768px) {
-            h1 {
-                font-size: 1.8rem; /* Reduce size of the main heading */
-            }
-
-            h2 {
-                font-size: 1.4rem; /* Reduce size of subheadings */
-            }
-
-            .project-details {
-                padding: 10px;
-            }
-
-            .card {
-                flex-basis: calc(50% - 30px); /* 2 cards per row on tablet-sized screens */
-            }
-
-            .cards-container {
-                gap: 15px; /* Reduce gap between cards */
-            }
-
-            p {
-                font-size: 1rem; /* Reduce text size */
+            section {
+                flex-basis: calc(50% - 20px); /* 2 sections per row on tablets */
             }
         }
 
         /* Media Queries for Mobile Phones */
         @media only screen and (max-width: 480px) {
-            h1 {
-                font-size: 1.5rem; /* Further reduce main heading size */
+            section {
+                flex-basis: 100%; /* Full width sections on mobile */
             }
 
-            h2 {
-                font-size: 1.2rem; /* Further reduce subheading size */
-            }
-
-            .project-details {
-                padding: 5px;
-            }
-
-            .card {
-                flex-basis: 100%; /* Full width cards on mobile */
-            }
-
-            p {
-                font-size: 0.9rem; /* Smaller paragraph text */
-            }
-
-            .button {
-                padding: 8px 16px; /* Smaller buttons */
-                font-size: 14px; /* Reduce button font size */
-            }
-
-            .cards-container {
-                flex-direction: column; /* Stack the cards vertically */
-                gap: 10px; /* Less gap between stacked cards */
+            .sections-container {
+                gap: 15px;
             }
         }
     </style>
@@ -145,62 +96,48 @@
 <div class="project-details">
     <h1>Logotypes</h1>
     <br>
-    <div class="cards-container">
-        <div class="card">
+    <div class="sections-container">
+        <section>
             <img src="Syla consulting.png" alt="Syla Consulting">
-            <div class="card-content">
-                <h2>Syla Consulting</h2>
-                <p>A comprehensive branding solution for Syla Consulting, focusing on modern and clean design elements to represent the company's professionalism and expertise.</p>
-            </div>
-        </div>
+            <h2>Syla Consulting</h2>
+            <p>A comprehensive branding solution for Syla Consulting, focusing on modern and clean design elements to represent the company's professionalism and expertise.</p>
+        </section>
 
-        <div class="card">
+        <section>
             <img src="Atelier_evelyn_logo.svg" alt="Atelier Evelyn">
-            <div class="card-content">
-                <h2>Atelier Evelyn</h2>
-                <p>The logo establishes the fashion brand's identity, reflecting its elegance and enhancing recognition.</p>
-            </div>
-        </div>
+            <h2>Atelier Evelyn</h2>
+            <p>The logo establishes the fashion brand's identity, reflecting its elegance and enhancing recognition.</p>
+        </section>
 
-        <div class="card">
+        <section>
             <img src="riki copy.png" alt="Riki's Brush">
-            <div class="card-content">
-                <h2>Riki's Brush</h2>
-                <p>Created a sleek and minimalist logotype for Riki Brush, emphasizing simplicity and creativity.</p>
-            </div>
-        </div>
+            <h2>Riki's Brush</h2>
+            <p>Created a sleek and minimalist logotype for Riki Brush, emphasizing simplicity and creativity.</p>
+        </section>
         
-        <div class="card">
+        <section>
             <img src="keepit.jpg" alt="Keep It logotype">
-            <div class="card-content">
-                <h2>Keep It</h2>
-                <p>I designed a logotype for a student-led project at Jönköping University focused on reducing water usage.</p>
-            </div>
-        </div>
+            <h2>Keep It</h2>
+            <p>I designed a logotype for a student-led project at Jönköping University focused on reducing water usage.</p>
+        </section>
         
-        <div class="card">
+        <section>
             <img src="MJ_logo.jpg" alt="MJ">
-            <div class="card-content">
-                <h2>MJ</h2>
-                <p>Crafted a distinctive logotype for MJ, focusing on uniqueness and brand recognition.</p>
-            </div>
-        </div>
+            <h2>MJ</h2>
+            <p>Crafted a distinctive logotype for MJ, focusing on uniqueness and brand recognition.</p>
+        </section>
 
-        <div class="card">
+        <section>
             <img class="moondust" src="2.jpg" alt="Moondust logotype">
-            <div class="card-content">
-                <h2>Moondust logotype</h2>
-                <p>Logotype project for leisure school.</p>
-            </div>
-        </div>
+            <h2>Moondust logotype</h2>
+            <p>Logotype project for leisure school.</p>
+        </section>
 
-        <div class="card">
+        <section>
             <img src="logorenata.png" alt="Personal logotype">
-            <div class="card-content">
-                <h2>RJ logotype</h2>
-                <p>I created a personal logotype that I use on this webpage.</p>
-            </div>
-        </div>
+            <h2>RJ logotype</h2>
+            <p>I created a personal logotype that I use on this webpage.</p>
+        </section>
     </div>
     <br>  
     <p><a href="index.html" class="button">Navigate back to portfolio</a></p>
