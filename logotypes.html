@@ -27,7 +27,7 @@
 
         .project-details {
             text-align: center;
-            max-width: 800px;
+            max-width: 100%;
             margin: 0 auto;
         }
 
@@ -35,14 +35,16 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            gap: 20px; /* Gap between sections */
+            gap: 30px; /* Larger gap between sections */
+            margin-left: 20px;
+            margin-right: 20px;
         }
 
         section {
             background-color: rgba(255, 255, 255, 0.3); /* White with opacity */
-            padding: 20px;
+            padding: 30px; /* More padding for larger sections */
             border-radius: 10px;
-            flex-basis: calc(23% - 20px); /* 4 sections per row */
+            flex-basis: calc(24% - 30px); /* Make sections wider, keeping 4 per row */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
             text-align: center;
             transition: transform 0.3s ease;
@@ -52,17 +54,17 @@
         section img {
             width: 100%;
             height: auto;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .button {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 12px 24px;
             background-color: #d3d3d3;
             color: #323232;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 16px;
+            font-size: 18px; /* Slightly larger font size */
             letter-spacing: 0.05em;
             transition: background-color 0.3s ease;
         }
@@ -72,10 +74,19 @@
             color: #000;
         }
 
+        h2 {
+            font-size: 1.5rem; /* Larger subheadings */
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1rem; /* Larger paragraph text */
+        }
+
         /* Media Queries for Tablets and Smaller Devices */
         @media only screen and (max-width: 768px) {
             section {
-                flex-basis: calc(50% - 20px); /* 2 sections per row on tablets */
+                flex-basis: calc(48% - 30px); /* 2 sections per row on tablets */
             }
         }
 
@@ -86,7 +97,7 @@
             }
 
             .sections-container {
-                gap: 15px;
+                gap: 20px; /* Reduce gap on mobile */
             }
         }
     </style>
